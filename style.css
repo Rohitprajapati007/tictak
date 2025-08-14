@@ -1,0 +1,117 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    overflow-x: hidden;
+}
+#wrapper{
+    overflow-x: hidden;
+    height: 100vh;
+}
+body{
+    text-align: center;
+    overflow-x: hidden;
+    background-image: linear-gradient(#ff1b6b,#f89b29);
+}
+
+.box{
+    width: 12rem;
+    height: 12rem;
+    cursor: pointer;
+    border: 2px solid black;
+    gap: 4px;
+    font-size: 3rem;
+    color: #000000;
+    /* background-image: linear-gradient(to right,#84ffc9,#aab2ff,#eca0ff); */
+    /* background: linear-gradient(135deg, #ffb347, #ffcc33); */
+
+    background: rgba(255, 255, 255, 0.2);
+backdrop-filter: blur(10px);
+border: 1px solid rgba(255, 255, 255, 0.3);
+
+
+
+    transition: transform .3s; 
+    
+}
+.box:hover{
+
+    transform:  scale(1.1);
+    translate: smooth;
+
+}
+.play_area{
+    /* display:none; */
+    display: flex;
+    flex-wrap: wrap;
+    width: 50%;
+    gap: 2px;
+    margin: 0 auto;
+    margin-top: 2.5rem;
+    justify-content: center;
+    align-items: center;
+    
+}
+#restart{
+    width: 5rem;
+    height: 1.5rem;
+    margin-top: 10px;
+    background-color: chartreuse;
+    margin: 20px;
+}
+
+
+.winner p{
+    text-align: center;
+    font-size: xx-large;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: bold;
+    
+    margin-top: 4rem;
+   display: flex;
+   height: 12rem;
+   justify-content: center;
+   align-items: space-between;
+   color: #6a0dad;
+   text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+}
+.congrats-container {
+  /* Basic styling */
+  font-size: 3rem;
+  margin-top: 15px;
+
+}
+
+.congrats-container h1 {
+  /* Text styling and animation properties */
+  /* background: linear-gradient(135deg, #ffcc70, #ff9966); */
+    background: linear-gradient(90deg, #fff5b7, #ffd700, #ffa500);
+-webkit-background-clip: text;
+-webkit-text-fill-color: transparent;
+height: 15rem;
+
+  animation: shake 0.5s infinite alternate; /* Example shake animation */
+}
+
+@keyframes shake {
+  0% { transform: translateX(0); }
+  25% { transform: translateX(-5px); }
+  75% { transform: translateX(5px); }
+  100% { transform: translateX(0); }
+}
+
+
+
+
+
+#main{
+   text-shadow: 2px 2px 4px rgba(0,0,0,3);
+   color: #ffffff;
+
+ }
+ /* .winner{
+    display: none;
+ } */
+.visible{
+    display:none;
+}

@@ -1,2 +1,1 @@
-# tictak
-tictak game 
+# tic tak toe
