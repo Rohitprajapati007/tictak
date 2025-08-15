@@ -12,6 +12,7 @@ body{
     text-align: center;
     overflow-x: hidden;
     background-image: linear-gradient(#ff1b6b,#f89b29);
+    scroll-behavior: smooth;
 }
 
 .box{
@@ -41,6 +42,7 @@ border: 1px solid rgba(255, 255, 255, 0.3);
 
 }
 .play_area{
+    scroll-behavior: smooth;
     /* display:none; */
     display: flex;
     flex-wrap: wrap;

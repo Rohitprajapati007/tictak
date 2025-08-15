@@ -4,7 +4,8 @@ const rst_btn = document.getElementById('restart');
 // const rest_btn = document.getElementById('restart');
 const winner = document.querySelector('.winner');
 const main = document.getElementById('main');
-const popUp = document.querySelector('.congrats-container');
+const popUp = document.querySelector('#congrats_heading');
+const msg = document.getElementById('winner_para');
 let turn0 = true;
 
 winner.classList.add('visible');
@@ -38,13 +39,29 @@ const winPatterns = [
                 if(box.innerText == "") draw = false;
             });
             if(draw){
-                winner.classList.remove('visible');
-                let msg = document.createElement("p");
-                msg.textContent="This game is ends with draw try again";
-                let head = document.createElement('h1');
-                head.textContent = "Nice competition";
-                popUp.appendChild(head);   
-                winner.appendChild(msg);
+                // winner.classList.remove('visible');
+                // let msg = document.createElement("p");
+                // msg.textContent="This game is ends with draw try again";
+                // let head = document.createElement('h1');
+                // head.textContent = "Nice competition";
+                // popUp.appendChild(head);   
+                // winner.appendChild(msg);
+
+                 winner.classList.remove('visible');    
+            // $("div").removeClass('visible'); 
+
+
+            
+            // let msg = document.createElement("p");
+            
+            msg.textContent="This game is ends with draw try again"; 
+            
+            // let head = document.createElement('h1');
+            
+            popUp.textContent = "Nice competition";
+            
+
+
 
 
                 break;
@@ -64,14 +81,22 @@ const winPatterns = [
         {
 
             
-            // winner.classList.remove('visible');    
-            $("div").removeClass('visible'); 
-            let msg = document.createElement("p");
+            winner.classList.remove('visible');    
+            // $("div").removeClass('visible'); 
+
+
+            
+            // let msg = document.createElement("p");
+            
             msg.textContent=`winner is ${winner2}`; 
-            let head = document.createElement('h1');
-            head.textContent = "Congratulation";
-            popUp.appendChild(head);
-            winner.appendChild(msg);
+            
+            // let head = document.createElement('h1');
+            
+            popUp.textContent = "Congratulation";
+            
+            // popUp.appendChild(head);
+            
+            // winner.appendChild(msg);
             // console.log(msg);
         }
 
@@ -100,12 +125,15 @@ rst_btn.onclick = function(){
     boxes.forEach(box=>{
             box.innerText ="";
             box.disabled = false;
+
             // winner.classList.add('visible');
             // winner.classList.add('visible');
 
         })
+    msg.textContent = "";
+    popUp.textContent = "";
+    winner.classList.add('visible');
 
-winner.remove("tictak")
 }
 
 // rest_btn.onclick = function(){
